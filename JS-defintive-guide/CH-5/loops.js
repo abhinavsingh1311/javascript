@@ -21,3 +21,11 @@ for (let word of wordSet) {
     unique.push(word);
 }
 unique
+
+//map
+
+let m = new Map([[1, "one"]]);
+for (let [key, value] of m) {
+    key
+    value
+}
