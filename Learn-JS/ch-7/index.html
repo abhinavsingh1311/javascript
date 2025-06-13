@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: white;
+        }
+
+        form {
+            max-width: 200px;
+            margin: 40px auto;
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 5px;
+        }
+
+        button {
+            display: block;
+            margin: 5px auto;
+            padding: 5px;
+            background: teal;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .success {
+            border: 2px solid green;
+        }
+
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="signup-form">
+        <input type="text" id="name" placeholder="Enter your name">
+        <button type="submit" value="submit">Submit</button>
+        <div class="feedback"></div>
+    </form>
+    <script src="sandbox.js"></script>
+</body>
+
+</html>
