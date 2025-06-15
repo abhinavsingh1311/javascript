@@ -1,0 +1,27 @@
+[
+    {
+        "text": "Buy milk",
+        "completed": false,
+        "priority": "high",
+        "author": "Luigi"
+    },
+    {
+        "text": "Avoid Mario",
+        "completed": false,
+        "priority": "low",
+        "author": "Luigi"
+    },
+    {
+        "text": "Buy bread",
+        "completed": true,
+        "priority": "medium",
+        "author": "Luigi"
+    },
+    {
+        "text": "Buy cheese",
+        "completed": false,
+        "priority": "high",
+        "author": "Luigi"
+    },
+    {}
+]

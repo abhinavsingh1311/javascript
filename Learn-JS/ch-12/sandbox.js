@@ -60,21 +60,45 @@ const url = "https://jsonplaceholder.typicode.com/todos";
 // );
 
 
-const getTodos = (resource, callback) => {
-    return new Promise((res, rej) => {
-        const request = new XMLHttpRequest();
-        request.addEventListener('readystatechange', () => {
-            if (request.readyState === 4 && request.status === 200) {
-                const data = JSON.parse(request.responseText);
-                res(data);
-            } else if (request.readyState === 4) {
-                rej('could not fetch data');
-            }
-        });
-        request.open('GET', url);
-        request.send();
-    });
+// const getTodos = (resource, callback) => {
+//     return new Promise((res, rej) => {
+//         const request = new XMLHttpRequest();
+//         request.addEventListener('readystatechange', () => {
+//             if (request.readyState === 4 && request.status === 200) {
+//                 const data = JSON.parse(request.responseText);
+//                 res(data);
+//             } else if (request.readyState === 4) {
+//                 rej('could not fetch data');
+//             }
+//         });
+//         request.open('GET', url);
+//         request.send();
+//     });
+// };
+
+// getTodos().then((data) => console.log('Promised Resolved', data)).catch(error => console.log(error));
+// //getSomething().then(data => console.log(data)).catch(error => console.log(error));
+
+//fetch api
+
+// fetch('todos/luigi.json').then((res) => {
+//     console.log('resolved', res);
+//     return res.json();
+// }).then((data) => console.log(data)).catch((error) => {
+//     console.log('rejected', error);
+// });
+
+//async await
+
+const getTodos = async () => {
+    const response = await fetch('todos/luigi.json');
+    //console.log(response);
+    const data = await response.json();
+    //console.log(data);
+    return data;
 };
 
-getTodos().then((data) => console.log('Promised Resolved', data)).catch(error => console.log(error));
-//getSomething().then(data => console.log(data)).catch(error => console.log(error));
+// const test = getTodos();
+// console.log(test);
+
+getTodos().then(data => console.log(data));
